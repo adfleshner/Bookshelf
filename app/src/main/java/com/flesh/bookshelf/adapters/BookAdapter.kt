@@ -1,3 +1,13 @@
+/*
+ * ------------------------------------------------------------
+ * "THE BEERWARE LICENSE" (Revision 42):
+ * adfleshner wrote this code. As long as you retain this
+ * notice, you can do whatever you want with this stuff. If we
+ * meet someday, and you think this stuff is worth it, you can
+ * buy me a beer in return.
+ * ------------------------------------------------------------
+ */
+
 package com.flesh.bookshelf.adapters
 
 import android.net.Uri
@@ -11,7 +21,7 @@ import com.flesh.bookshelf.R
 import com.flesh.bookshelf.objects.Book
 import kotlinx.android.synthetic.main.grid_item_book.view.*
 
-class BookAdpater : RecyclerView.Adapter<BookAdpater.BookViewHolder>() {
+class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
    private val list = mutableListOf<Book>()
 

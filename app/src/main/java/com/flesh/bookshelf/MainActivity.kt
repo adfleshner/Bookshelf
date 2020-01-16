@@ -1,3 +1,13 @@
+/*
+ * ------------------------------------------------------------
+ * "THE BEERWARE LICENSE" (Revision 42):
+ * adfleshner wrote this code. As long as you retain this
+ * notice, you can do whatever you want with this stuff. If we
+ * meet someday, and you think this stuff is worth it, you can
+ * buy me a beer in return.
+ * ------------------------------------------------------------
+ */
+
 package com.flesh.bookshelf
 
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +17,7 @@ import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import com.flesh.bookshelf.adapters.BookAdpater
+import com.flesh.bookshelf.adapters.BookAdapter
 import com.flesh.bookshelf.contract.BookStoreContract
 import com.flesh.bookshelf.objects.Book
 import com.flesh.bookshelf.presenter.BookStorePresenter
@@ -17,7 +27,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), BookStoreContract.View {
 
     private lateinit var bookViewModel: BookViewModel
-    private lateinit var adpater: BookAdpater
+    private lateinit var adapter: BookAdapter
     private var bookPresenter =
         BookStorePresenter()
 
@@ -29,8 +39,8 @@ class MainActivity : AppCompatActivity(), BookStoreContract.View {
     }
 
     private fun initList() {
-        adpater = BookAdpater()
-        listBooks.adapter = adpater
+        adapter = BookAdapter()
+        listBooks.adapter = adapter
         listBooks.layoutManager = GridLayoutManager(this, resources.getInteger(R.integer.spancount))
         srlBooks.setOnRefreshListener { bookPresenter.reloadBooks() }
     }
@@ -44,7 +54,7 @@ class MainActivity : AppCompatActivity(), BookStoreContract.View {
 
     override fun showBooks(books: List<Book>) {
         listBooks.visibility = VISIBLE
-        adpater.setData(books)
+        adapter.setData(books)
     }
 
     override fun showLoader() {

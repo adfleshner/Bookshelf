@@ -1,3 +1,13 @@
+/*
+ * ------------------------------------------------------------
+ * "THE BEERWARE LICENSE" (Revision 42):
+ * adfleshner wrote this code. As long as you retain this
+ * notice, you can do whatever you want with this stuff. If we
+ * meet someday, and you think this stuff is worth it, you can
+ * buy me a beer in return.
+ * ------------------------------------------------------------
+ */
+
 package com.flesh.bookshelf.presenter
 
 import androidx.lifecycle.LifecycleOwner
@@ -6,15 +16,13 @@ import com.flesh.bookshelf.viewmodels.BookViewModel
 import com.flesh.bookshelf.contract.BookStoreContract
 
 
-// 1
 class BookStorePresenter : BookStoreContract.Presenter {
-    // 2
+
     private lateinit var view: BookStoreContract.View
     private lateinit var viewModel: BookViewModel
-    // 3
+
     override fun attach(
-        view: BookStoreContract.View,
-        lco: LifecycleOwner,
+        view: BookStoreContract.View, lco: LifecycleOwner,
         bookViewModel: BookViewModel
     ) {
         this.view = view
@@ -29,7 +37,6 @@ class BookStorePresenter : BookStoreContract.Presenter {
         })
     }
 
-    // 4
     override fun loadBooks() {
         view.showLoader()
         viewModel.getData()
