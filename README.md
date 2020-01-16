@@ -7,13 +7,9 @@ This was a fun exercise to learn and further my knowledge. feel free to fork and
 
 # License
 
-------------------------------------------------------------
-
 "THE BEERWARE LICENSE" (Revision 42):
 I wrote this code. As long as you retain this 
 notice, you can do whatever you want with this stuff. If we
 meet someday, and you think this stuff is worth it, you can
 buy me a beer in return.
-
-------------------------------------------------------------
 
