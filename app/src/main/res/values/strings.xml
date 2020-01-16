@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bookshelf</string>
+    <string name="no_books_here">No Books Here!</string>
+</resources>
